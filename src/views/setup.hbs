@@ -1,0 +1,22 @@
+<h1>Setup Chore Rotation</h1>
+<form action="/generate-schedule" method="POST">
+    <div class="mb-3">
+        <label for="members" class="form-label">Family Members (comma separated)</label>
+        <input type="text" class="form-control" id="members" name="members" required 
+               placeholder="e.g., Alice, Bob, Charlie">
+    </div>
+    
+    <div class="mb-3">
+        <label for="chores" class="form-label">Chores (one per line, format: Name:Frequency)</label>
+        <textarea class="form-control" id="chores" name="chores" rows="5" required
+                  placeholder="e.g., Dishes:3&#10;Vacuum:2&#10;Laundry:1"></textarea>
+        <div class="form-text">Frequency = times per week</div>
+    </div>
+    
+    <div class="mb-3">
+        <label for="weeks" class="form-label">Number of Weeks to Schedule</label>
+        <input type="number" class="form-control" id="weeks" name="weeks" min="1" value="4" required>
+    </div>
+    
+    <button type="submit" class="btn btn-primary">Generate Schedule</button>
+</form>
